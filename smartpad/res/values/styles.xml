@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <style name="app_theme" parent="@android:style/Theme">
+        <item name="android:windowBackground">@drawable/bar_bg_repeat</item>
+        <item name="android:windowContentOverlay">@drawable/title_bar_shadow</item>
+    </style>
+    <style name="tab_label">
+        <item name="android:shadowColor">#ff222222</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">-1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+</resources>
