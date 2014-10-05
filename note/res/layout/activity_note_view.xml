@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#004D79" >
+    
+<!--Leider nicht mehr gebraucht
+        	<Spinner
+        	android:id="@+id/Inlang"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_centerHorizontal="true"
+        	android:entries="@array/country_arrays"
+        	android:prompt="@string/country_prompt"/>
+--> 
+       	        		
+<!--
+BUTTONS AT THE TOP
+-->    
+	<RelativeLayout android:id="@+id/relativeLayout1"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:stretchColumns="1">
+    	    <TextView
+        		android:id="@+id/notice"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="Please declare input language:"
+        		android:layout_alignParentLeft="true"
+        		android:textAppearance="?android:attr/textAppearanceMedium" />
+        	<Button 
+        		android:id="@+id/de"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+    			android:layout_toLeftOf="@+id/fr" 
+        		android:text="German" />
+        	<Button
+        		android:id="@+id/fr"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_toLeftOf="@+id/es" 
+        		android:text="French" />
+        	<Button
+        		android:id="@+id/es"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_alignParentRight="true"
+        		android:text="Spanish" />
+	</RelativeLayout>
+        	   
+<!--
+Is the input string
+In the advanced version, it's replaced by sentence after sentence from txt file.
+
+    <EditText
+        android:id="@+id/etUserText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ems="10" >
+ 
+        <requestFocus />
+    </EditText>
+-->
+        <EditText
+        android:id="@+id/etUserText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="LOAD FILES TO READ"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+<!--
+BUTTONS IN THE MIDDLE
+-->    
+	<RelativeLayout android:id="@+id/relativeLayout2"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:stretchColumns="1">
+        	<Button 
+        		android:id="@+id/bTranslate"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentRight="true"
+        		android:text="Translation" />
+    		<Button
+        		android:id="@+id/bSpeak"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_toLeftOf="@+id/bTranslate" 
+        		android:text="Audio" />
+        	
+        	<!--	
+        	<Spinner
+        	android:id="@+id/Inlang"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_centerHorizontal="true"
+        	android:entries="@array/country_arrays"
+        	android:prompt="@string/country_prompt"/>
+        	-->
+        	
+        	<Button 
+        		android:id="@+id/bPrev"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentLeft="true"
+        		android:text="Previous" />
+    		<Button
+        		android:id="@+id/bNext"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_toRightOf="@+id/bPrev" 
+        		android:text="Next" />
+	</RelativeLayout>
+
+<!--
+ tvTranslatedText is the translation
+-->
+    <TextView
+        android:id="@+id/tvTranslatedText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:layout_weight="1"
+        android:text="CLICK BUTTON FOR TRANSLATION"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+</LinearLayout>

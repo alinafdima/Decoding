@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.note"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".NoteList"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NoteEdit"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustUnspecified" />
+        <activity
+            android:name=".NoteView"
+            android:label="@string/title_activity_note_view"
+            android:parentActivityName=".NoteList" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.note.NoteList" />
+        </activity>
+        <activity
+            android:name=".WordList"
+            android:label="@string/title_activity_word_list" >
+        </activity>
+        <activity
+            android:name=".WordsDbAdapter"
+            android:label="@string/title_activity_words_db_adapter" >
+        </activity>
+        <activity
+            android:name=".WordDbAdapter"
+            android:label="@string/title_activity_word_db_adapter" >
+        </activity>
+        <activity
+            android:name=".WordEdit"
+            android:label="@string/title_activity_word_edit" >
+        </activity>
+    </application>
+<!--
+		VERY IMPORTANT
+      -->
+	<uses-permission android:name="android.permission.INTERNET" /> 
+</manifest>
